@@ -1,81 +1,91 @@
+/* Estilo base */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fdfdfd;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
 }
 
 h1 {
   text-align: center;
-  color: #222;
+  font-size: 32px;
   margin-bottom: 40px;
+  color: #333;
 }
 
+/* Contenedor de la malla */
 #malla {
-  display: grid;
-  grid-template-rows: repeat(10, auto);
-  gap: 20px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+/* Cada semestre es una fila */
 .semestre {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 15px;
   align-items: flex-start;
 }
 
 .semestre h2 {
   width: 100%;
-  margin: 0;
-  padding-bottom: 5px;
+  margin: 0 0 10px 0;
+  font-size: 22px;
+  color: #444;
   border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
 }
 
+/* Cajas de materias */
 .curso {
-  border: 2px solid #666;
-  padding: 10px;
-  border-radius: 10px;
-  min-width: 200px;
-  background-color: #e3f2fd;
+  background-color: #ffffff;
+  border-left: 6px solid #1976d2;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 15px 12px;
+  min-width: 220px;
+  flex-grow: 1;
   text-align: center;
+  transition: all 0.3s;
   cursor: pointer;
-  transition: background-color 0.3s;
+  position: relative;
 }
 
 .curso:hover {
-  background-color: #bbdefb;
+  transform: scale(1.03);
 }
 
+/* Estados */
 .curso.bloqueado {
   background-color: #eeeeee;
-  border-color: #999;
+  border-left-color: #999;
   color: #999;
   cursor: not-allowed;
 }
 
 .curso.desbloqueado {
-  background-color: #ffe0ec;
-  border-color: #ec407a;
-  color: #c2185b;
+  background-color: #fff0f6;
+  border-left-color: #d81b60;
+  color: #880e4f;
 }
 
 .curso.completado {
-  background-color: #c8e6c9;
-  border-color: #388e3c;
+  background-color: #e0f2f1;
+  border-left-color: #388e3c;
   color: #2e7d32;
   text-decoration: line-through;
 }
 
+/* Tipos */
 .tipo-taller {
-  border-left: 6px solid #42a5f5;
+  border-left-color: #42a5f5;
 }
-
 .tipo-idioma {
-  border-left: 6px solid #ff7043;
+  border-left-color: #ff7043;
 }
-
 .tipo-optativa {
-  border-left: 6px solid #ab47bc;
+  border-left-color: #ab47bc;
 }
