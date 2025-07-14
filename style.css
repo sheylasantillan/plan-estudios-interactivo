@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+#malla {
+  display: grid;
+  grid-template-rows: repeat(10, auto);
+  gap: 20px;
+  justify-content: center;
+}
+
+.semestre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.semestre h2 {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ccc;
+}
+
+.curso {
+  border: 2px solid #666;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 200px;
+  background-color: #e3f2fd;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.curso:hover {
+  background-color: #bbdefb;
+}
+
+.curso.bloqueado {
+  background-color: #eeeeee;
+  border-color: #999;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.curso.desbloqueado {
+  background-color: #ffe0ec;
+  border-color: #ec407a;
+  color: #c2185b;
+}
+
+.curso.completado {
+  background-color: #c8e6c9;
+  border-color: #388e3c;
+  color: #2e7d32;
+  text-decoration: line-through;
+}
+
+.tipo-taller {
+  border-left: 6px solid #42a5f5;
+}
+
+.tipo-idioma {
+  border-left: 6px solid #ff7043;
+}
+
+.tipo-optativa {
+  border-left: 6px solid #ab47bc;
+}
